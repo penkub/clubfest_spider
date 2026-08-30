@@ -2,10 +2,11 @@
 #include <esp_wifi.h>
 #include <esp_now.h>
 #include <WiFi.h>
+#include "config.h"
 
 char kbinp;
 //CC:DB:A7:33:5A:00
-uint8_t broadcastAddress[] = {0xcc, 0xdb, 0xa7, 0x33, 0x5a, 0x00};
+uint8_t broadcastAddress[] = RECEIVER_MAC;
 
 typedef struct Directions {
   bool fwd;
