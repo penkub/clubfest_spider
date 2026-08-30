@@ -1,0 +1,2 @@
+master address cc:db:a7:33:5a:00
+slave address 9c:9c:1f:d5:87:cc
