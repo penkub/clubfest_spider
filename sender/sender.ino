@@ -4,8 +4,8 @@
 #include <WiFi.h>
 #include "config.h"
 
+
 char kbinp;
-//CC:DB:A7:33:5A:00
 uint8_t broadcastAddress[] = RECEIVER_MAC;
 
 typedef struct Directions {
@@ -70,7 +70,7 @@ void loop() {
   if (kbinp == 'd') {
     direction.rgt = 1;
   }
-    if (kbinp == '}') {
+  if (kbinp == '}') {
     direction.fwd = 0;
   }
   if (kbinp == 'y') {
@@ -95,5 +95,4 @@ void loop() {
   else {
     //Serial.println("Error sending the data");
   }
-
 }
