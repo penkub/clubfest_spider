@@ -1,0 +1,5 @@
+#ifndef TRAPEZOIDAL_PROFILE_HPP
+#define TRAPEZOIDAL_PROFILE_HPP
+
+
+#endif

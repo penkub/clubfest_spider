@@ -11,12 +11,19 @@ PCA9685_ServoEval pwmServo(112, 500); // (-90deg, +90deg)
 
 void setup() {
   Wire.begin();                 // Wire must be started first
-  driver.resetDevices();        // Software resets all PCA9685 devices on Wire line
+  driver.resetDevices();         // Software resets all PCA9685 devices on Wire line
   driver.init();
   driver.setPWMFrequency(50);   // Set frequency to 50Hz
 }
 
 void loop() {
- driver.setChannelPWM(0, 128 << 4);
-  delay(1000);  
+  driver.setChannelPWM(0, pwmServo.pwmForAngle(-90));
+  driver.setChannelPWM(1, pwmServo.pwmForAngle(-90));
+  delay(1000);
+  driver.setChannelPWM(0, pwmServo.pwmForAngle(0));
+  driver.setChannelPWM(1, pwmServo.pwmForAngle(0));
+  delay(1000);
+  driver.setChannelPWM(0, pwmServo.pwmForAngle(90));
+  driver.setChannelPWM(1, pwmServo.pwmForAngle(90));
+  delay(1000);
 }

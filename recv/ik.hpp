@@ -1,5 +1,5 @@
-#ifndef IK_H
-#define IK_H
+#ifndef IK_HPP
+#define IK_HPP
 #include <utility>
 #include <cmath>
 
